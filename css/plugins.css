@@ -1,0 +1,200 @@
+/*-----------------------------
+Content Security
+------------------------------*/
+*,
+body {
+  /* Protect */
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently */
+}
+/*-----------------------------
+Typing.js
+------------------------------*/
+#intro .skills {
+  font-weight: 700;
+  font-size: 60px;
+  margin-bottom: 28px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#intro .cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left
+}
+
+#intro .cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0
+}
+
+#intro .cd-words-wrapper b.is-visible {
+  position: relative
+}
+
+#intro .cd-headline.clip span {
+  display: inline-block
+}
+
+#intro .cd-headline.clip .cd-words-wrapper {
+  overflow: hidden;
+  vertical-align: top
+}
+
+#intro .cd-headline.clip .cd-words-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #aebcb9
+}
+
+#intro .cd-headline.clip b {
+  opacity: 0
+}
+
+#intro .cd-headline.clip b.is-visible {
+  opacity: 1
+}
+
+#intro .description {
+  margin-bottom: 35px;
+  font-size: 16px;
+  color: #f3f3f3;
+  font-weight: 400
+}
+
+#intro .btn {
+  color: #222;
+  background-color: #fff;
+  border: 1px solid #fff;
+  font-weight: 500;
+  padding: 8px 36px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 30px;
+  margin: 0 9px;
+  padding: 9px 38px;
+  letter-spacing: .5px
+}
+
+#intro .btn:focus {
+  box-shadow: none;
+  border-color: #d9d9d9;
+  background-color: #d9d9d9
+}
+
+#intro .btn.hire {
+  color: #fff
+}
+
+#intro .scroll-icon {
+  position: absolute;
+  width: 29px;
+  right: 0;
+  bottom: 3.75%;
+  left: 0;
+  margin: 0 auto
+}
+
+#intro .scroll-icon .mouse {
+  width: 3px;
+  padding: 5px 11px;
+  height: 28px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: .75;
+  box-sizing: content-box;
+  background-color: rgba(0, 0, 0, .35)
+}
+
+#intro .scroll-icon .wheel {
+  width: 3px;
+  height: 9px;
+  border-radius: 25%;
+  background-color: #fff;
+  -webkit-animation-name: scrollDown;
+  animation-name: scrollDown;
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+  animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite
+}
+
+@-webkit-keyframes scrollDown {
+  0% {
+      opacity: 0
+  }
+  10% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1
+  }
+  100% {
+      -webkit-transform: translateY(15px);
+      transform: translateY(15px);
+      opacity: 0
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+      opacity: 0
+  }
+  10% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1
+  }
+  100% {
+      -webkit-transform: translateY(15px);
+      transform: translateY(15px);
+      opacity: 0
+  }
+}
+
+@media (max-width:575.98px) {
+  #intro .btn {
+      margin-bottom: 18px
+  }
+}
+
+@media (max-width:991.98px) {
+  #intro {
+      height: auto;
+      padding: 138px 0 90px 0
+  }
+  #intro .skills {
+      font-size: 40px
+  }
+  #intro .description {
+      font-size: 15px
+  }
+  #intro .scroll-icon {
+      display: none
+  }
+}
+
+@media (min-width:320px) and (max-width:375px) {
+  #intro .skills {
+      font-size: 32px
+  }
+}
